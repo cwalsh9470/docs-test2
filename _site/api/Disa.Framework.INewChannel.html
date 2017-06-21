@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface INewChannel
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface INewChannel
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Disa.Framework.INewChannel">
+  
+  
+  <h1 id="Disa_Framework_INewChannel" data-uid="Disa.Framework.INewChannel">Interface INewChannel
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Disa.Framework.html">Disa.Framework</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="Disa_Framework_INewChannel_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface INewChannel</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_INewChannel_FetchChannelBubbleGroup_Disa_Framework_Contact_ID___System_Action_Disa_Framework_BubbleGroup__.md&amp;value=---%0Auid%3A%20Disa.Framework.INewChannel.FetchChannelBubbleGroup(Disa.Framework.Contact.ID%5B%5D%2CSystem.Action%7BDisa.Framework.BubbleGroup%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/INewChannel.cs/#L35">View Source</a>
+  </span>
+  <a id="Disa_Framework_INewChannel_FetchChannelBubbleGroup_" data-uid="Disa.Framework.INewChannel.FetchChannelBubbleGroup*"></a>
+  <h4 id="Disa_Framework_INewChannel_FetchChannelBubbleGroup_Disa_Framework_Contact_ID___System_Action_Disa_Framework_BubbleGroup__" data-uid="Disa.Framework.INewChannel.FetchChannelBubbleGroup(Disa.Framework.Contact.ID[],System.Action{Disa.Framework.BubbleGroup})">FetchChannelBubbleGroup(Contact.ID[], Action&lt;BubbleGroup&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result of the <span class="xref">System.Action</span> as the BubbleGroup requested
+by the collection of <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>s.</p>
+<p>This method should return null if the cardinality of the <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>
+array is greater than 1 or if the 1 <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a> does not result in finding
+a <a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task FetchChannelBubbleGroup(Contact.ID[] contactIds, Action&lt;BubbleGroup&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>[]</td>
+        <td><span class="parametername">contactIds</span></td>
+        <td><p>An array of <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>s representing
+a <a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p><span class="xref">System.Action</span> on which the result should be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A new <span class="xref">System.Threading.Tasks.Task</span> that sets the result <span class="xref">System.Action</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_INewChannel_FetchChannelBubbleGroupAddress_System_String_System_String_System_Action_System_Boolean_System_String__.md&amp;value=---%0Auid%3A%20Disa.Framework.INewChannel.FetchChannelBubbleGroupAddress(System.String%2CSystem.String%2CSystem.Action%7BSystem.Boolean%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/INewChannel.cs/#L45">View Source</a>
+  </span>
+  <a id="Disa_Framework_INewChannel_FetchChannelBubbleGroupAddress_" data-uid="Disa.Framework.INewChannel.FetchChannelBubbleGroupAddress*"></a>
+  <h4 id="Disa_Framework_INewChannel_FetchChannelBubbleGroupAddress_System_String_System_String_System_Action_System_Boolean_System_String__" data-uid="Disa.Framework.INewChannel.FetchChannelBubbleGroupAddress(System.String,System.String,System.Action{System.Boolean,System.String})">FetchChannelBubbleGroupAddress(String, String, Action&lt;Boolean, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result of the <span class="xref">System.Action</span> as true with the new <a class="xref" href="Disa.Framework.BubbleGroup.html#Disa_Framework_BubbleGroup_Address">Address</a>
+if the creation of the Channel was successful, false othwerwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task FetchChannelBubbleGroupAddress(string name, string description, Action&lt;bool, string&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the channel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The description of the channel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p><span class="xref">System.Action</span> on which the result should be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A new <span class="xref">System.Threading.Tasks.Task</span> that sets the result <span class="xref">System.Action</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_INewChannel_GetChannelContacts_System_String_System_Action_System_Collections_Generic_List_Disa_Framework_Contact___.md&amp;value=---%0Auid%3A%20Disa.Framework.INewChannel.GetChannelContacts(System.String%2CSystem.Action%7BSystem.Collections.Generic.List%7BDisa.Framework.Contact%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/INewChannel.cs/#L66">View Source</a>
+  </span>
+  <a id="Disa_Framework_INewChannel_GetChannelContacts_" data-uid="Disa.Framework.INewChannel.GetChannelContacts*"></a>
+  <h4 id="Disa_Framework_INewChannel_GetChannelContacts_System_String_System_Action_System_Collections_Generic_List_Disa_Framework_Contact___" data-uid="Disa.Framework.INewChannel.GetChannelContacts(System.String,System.Action{System.Collections.Generic.List{Disa.Framework.Contact}})">GetChannelContacts(String, Action&lt;List&lt;Contact&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result of the <span class="xref">System.Action</span> as the collection of Channel <a class="xref" href="Disa.Framework.Contact.html">Contact</a>s
+based on the query passed in.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetChannelContacts(string query, Action&lt;List&lt;Contact&gt;&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">query</span></td>
+        <td><p>A query used to filter the list of <see cref="!:Contects"></see>. May be
+an empty string, in which case all Channels will be returned.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Disa.Framework.Contact.html">Contact</a>&gt;&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p><span class="xref">System.Action</span> on which the result should be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A new <span class="xref">System.Threading.Tasks.Task</span> that sets the result <span class="xref">System.Action</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_INewChannel_InviteToChannel_Disa_Framework_BubbleGroup_System_Tuple_Disa_Framework_Contact_Disa_Framework_Contact_ID____System_Action_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.INewChannel.InviteToChannel(Disa.Framework.BubbleGroup%2CSystem.Tuple%7BDisa.Framework.Contact%2CDisa.Framework.Contact.ID%7D%5B%5D%2CSystem.Action%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/INewChannel.cs/#L56">View Source</a>
+  </span>
+  <a id="Disa_Framework_INewChannel_InviteToChannel_" data-uid="Disa.Framework.INewChannel.InviteToChannel*"></a>
+  <h4 id="Disa_Framework_INewChannel_InviteToChannel_Disa_Framework_BubbleGroup_System_Tuple_Disa_Framework_Contact_Disa_Framework_Contact_ID____System_Action_System_Boolean__" data-uid="Disa.Framework.INewChannel.InviteToChannel(Disa.Framework.BubbleGroup,System.Tuple{Disa.Framework.Contact,Disa.Framework.Contact.ID}[],System.Action{System.Boolean})">InviteToChannel(BubbleGroup, Tuple&lt;Contact, Contact.ID&gt;[], Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result of the <span class="xref">System.Action</span> as true if the <a class="xref" href="Disa.Framework.Contact.html">Contact</a> was
+successfully invited to the channel, false otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task InviteToChannel(BubbleGroup group, Tuple&lt;Contact, Contact.ID&gt;[] contacts, Action&lt;bool&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The <a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a> in context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Tuple</span>&lt;<a class="xref" href="Disa.Framework.Contact.html">Contact</a>, <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>&gt;[]</td>
+        <td><span class="parametername">contacts</span></td>
+        <td><p>A <span class="xref">System.Tuple</span> containing <a class="xref" href="Disa.Framework.Contact.html">Contact</a> and <a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a>
+representation of the contact to invite.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p><span class="xref">System.Action</span> on which the result should be set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A new <span class="xref">System.Threading.Tasks.Task</span> that sets the result <span class="xref">System.Action</span>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_INewChannel.md&amp;value=---%0Auid%3A%20Disa.Framework.INewChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/INewChannel.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

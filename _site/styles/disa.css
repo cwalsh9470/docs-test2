@@ -1,0 +1,213 @@
+/* Add a white background color to the top navigation */
+.disa-topnav {
+    z-index: 3; /* Stay on top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 48px;
+    padding-left: 64px;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+
+    .disa-topnav image {
+        float: left;
+        display: inline;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .disa-topnav a {
+        display: inline;
+        font-size: 16px;
+        padding-left: 24px;
+        padding-right: 24px;
+        color: #818181;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        /* Change the color of links on hover */
+        .disa-topnav a:hover {
+            text-decoration: underline;
+        }
+
+/* Add a white background color to the top navigation 700 cyan*/
+.disa-frameworknav {
+    z-index: 2; /* Stay on top */
+    position: fixed; /* Stay in place */
+    top: 48px;
+    left: 0;
+    line-height: 48px;
+    width: 100%;
+    background-color: #0097a7;
+    overflow-x: hidden;
+    margin-right: 0px;
+}
+
+    .disa-frameworknav p {
+        display: inline;
+        float: left;    /* keep us inline with a styling below */
+        font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+        font-size: 24px;
+        color: #f2f2f2;
+        padding-left: 64px;
+        padding-right: 24px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0px;
+    }
+
+    /* Style the links inside the navigation bar */
+    .disa-frameworknav a {
+        display: block; /* block to get proper highlighting when hovering*/
+        float: left; /* keeps us inline with p styling above */
+        font-size: 16px;
+        color: #f2f2f2;
+        text-align: center;
+        padding-left: 24px;
+        padding-right: 24px;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        /* Change the color of links on hover 600 cyan*/
+        .disa-frameworknav a:hover {
+            background-color: #00acc1;
+            text-decoration: underline;
+        }
+
+.disa-frameworktitle {
+    z-index: 2;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    line-height: 128px;
+    padding-left: 64px;
+    font-family: segoe-ui_light,Segoe UI Light,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 36px;
+}
+
+/* The side navigation menu */
+.disa-sidenav {
+    z-index: 1; /* Stay on top */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    height: 100%; /* 100% Full-height */
+    width: 320px; /* 0 width - change this with JavaScript */
+    background-color: white; /* White */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 224px; /* Place content 224px from the top */
+    padding-left: 64px;
+    padding-right: 32px;
+    padding-bottom: 0px;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+    /* The navigation menu links */
+    .disa-sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 16px;
+        color: #818181;
+        display: block;
+        transition: 0.3s
+    }
+
+        /* When you mouse over the navigation links, change their color */
+        .disa-sidenav a:hover {
+            background-color: rgba(0,80,197,.07);
+            color: #0050c5;
+        }
+
+        /* Add a color to the active/current link */
+        #disaSidenav a.disa-sidenaveactive {
+            background-color: #0050c5;
+            color: white;
+        }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#disa-main {
+    z-index: 1; /* Stay on top */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    height: 100%; /* 100% Full-height */
+    padding-top: 224px;
+    margin-left: 320px;
+    margin-right: 64px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .disa-sidenav {
+        padding-top: 15px;
+    }
+
+        .disa-sidenav a {
+            font-size: 18px;
+        }
+}
+
+/* Three columns side by side */
+.disa-card-column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+    .disa-card-column a {
+        color: #222;
+    }
+
+        .disa-card-column a:hover {
+            color: #0078d7;
+        }
+
+/* Display the columns below each other instead of side by side on small screens */
+@media (max-width: 650px) {
+    .disa-card-column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.disa-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    height: 240px;
+}
+
+/* Some left and right padding inside the container */
+.disa-card-container {
+    padding: 0 16px;
+}
+
+    /* Clear floats */
+    .disa-card-container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+.disa-card-image-outer {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+}
+
+.disa-card-image-background {
+    background-color: #e4edf1;
+}
+
+.disa-card-title {
+    margin: 0;
+    color: #222;
+    font-family: segoe-ui_semibold,Segoe UI Semibold,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    display: block;
+}
+
+

@@ -1,0 +1,1045 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ThreadSafeList&lt;T&gt;
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ThreadSafeList&lt;T&gt;
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Disa.Framework.ThreadSafeList`1">
+  
+  
+  <h1 id="Disa_Framework_ThreadSafeList_1" data-uid="Disa.Framework.ThreadSafeList`1">Class ThreadSafeList&lt;T&gt;
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ThreadSafeList&lt;T&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Disa.Framework.html">Disa.Framework</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="Disa_Framework_ThreadSafeList_1_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ThreadSafeList&lt;T&gt; : IList&lt;T&gt;, ICollection&lt;T&gt;, IEnumerable&lt;T&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1__ctor_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.%23ctor(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L12">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1__ctor_" data-uid="Disa.Framework.ThreadSafeList`1.#ctor*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1__ctor_System_Collections_Generic_IEnumerable__0__" data-uid="Disa.Framework.ThreadSafeList`1.#ctor(System.Collections.Generic.IEnumerable{`0})">ThreadSafeList(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ThreadSafeList(IEnumerable&lt;T&gt; items = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Count.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L111">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Count_" data-uid="Disa.Framework.ThreadSafeList`1.Count*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Count" data-uid="Disa.Framework.ThreadSafeList`1.Count">Count</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Count</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_IsReadOnly.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L122">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_IsReadOnly_" data-uid="Disa.Framework.ThreadSafeList`1.IsReadOnly*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_IsReadOnly" data-uid="Disa.Framework.ThreadSafeList`1.IsReadOnly">IsReadOnly</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.IsReadOnly</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L53">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Item_" data-uid="Disa.Framework.ThreadSafeList`1.Item*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Item_System_Int32_" data-uid="Disa.Framework.ThreadSafeList`1.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; set; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.Item[System.Int32]</span></div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Add__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Add(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L71">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Add_" data-uid="Disa.Framework.ThreadSafeList`1.Add*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Add__0_" data-uid="Disa.Framework.ThreadSafeList`1.Add(`0)">Add(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Add(T)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_AddRange_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.AddRange(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L17">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_AddRange_" data-uid="Disa.Framework.ThreadSafeList`1.AddRange*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_AddRange_System_Collections_Generic_IEnumerable__0__" data-uid="Disa.Framework.ThreadSafeList`1.AddRange(System.Collections.Generic.IEnumerable{`0})">AddRange(IEnumerable&lt;T&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;T&gt; collection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td><span class="parametername">collection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Any.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Any%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L138">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Any_" data-uid="Disa.Framework.ThreadSafeList`1.Any*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Any" data-uid="Disa.Framework.ThreadSafeList`1.Any">Any()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Any()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Any_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Any(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L130">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Any_" data-uid="Disa.Framework.ThreadSafeList`1.Any*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Any_System_Func__0_System_Boolean__" data-uid="Disa.Framework.ThreadSafeList`1.Any(System.Func{`0,System.Boolean})">Any(Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Any(Func&lt;T, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Clear.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L79">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Clear_" data-uid="Disa.Framework.ThreadSafeList`1.Clear*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Clear" data-uid="Disa.Framework.ThreadSafeList`1.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Clear()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Contains__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Contains(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L87">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Contains_" data-uid="Disa.Framework.ThreadSafeList`1.Contains*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Contains__0_" data-uid="Disa.Framework.ThreadSafeList`1.Contains(`0)">Contains(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Contains(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Contains(T)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_CopyTo__0___System_Int32_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.CopyTo(%600%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L95">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_CopyTo_" data-uid="Disa.Framework.ThreadSafeList`1.CopyTo*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_CopyTo__0___System_Int32_" data-uid="Disa.Framework.ThreadSafeList`1.CopyTo(`0[],System.Int32)">CopyTo(T[], Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTo(T[] array, int arrayIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">array</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">arrayIndex</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.CopyTo(T[], System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_CountEx_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.CountEx(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L194">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_CountEx_" data-uid="Disa.Framework.ThreadSafeList`1.CountEx*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_CountEx_System_Func__0_System_Boolean__" data-uid="Disa.Framework.ThreadSafeList`1.CountEx(System.Func{`0,System.Boolean})">CountEx(Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int CountEx(Func&lt;T, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_First.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.First%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L154">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_First_" data-uid="Disa.Framework.ThreadSafeList`1.First*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_First" data-uid="Disa.Framework.ThreadSafeList`1.First">First()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T First()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_FirstOrDefault_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.FirstOrDefault(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L178">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_FirstOrDefault_" data-uid="Disa.Framework.ThreadSafeList`1.FirstOrDefault*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_FirstOrDefault_System_Func__0_System_Boolean__" data-uid="Disa.Framework.ThreadSafeList`1.FirstOrDefault(System.Func{`0,System.Boolean})">FirstOrDefault(Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T FirstOrDefault(Func&lt;T, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_GetEnumerator.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L202">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_GetEnumerator_" data-uid="Disa.Framework.ThreadSafeList`1.GetEnumerator*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_GetEnumerator" data-uid="Disa.Framework.ThreadSafeList`1.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;T&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_IndexOf__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.IndexOf(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L29">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_IndexOf_" data-uid="Disa.Framework.ThreadSafeList`1.IndexOf*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_IndexOf__0_" data-uid="Disa.Framework.ThreadSafeList`1.IndexOf(`0)">IndexOf(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int IndexOf(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.IndexOf(T)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Insert_System_Int32__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Insert(System.Int32%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L37">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Insert_" data-uid="Disa.Framework.ThreadSafeList`1.Insert*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Insert_System_Int32__0_" data-uid="Disa.Framework.ThreadSafeList`1.Insert(System.Int32,`0)">Insert(Int32, T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Insert(int index, T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.Insert(System.Int32, T)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Last.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Last%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L146">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Last_" data-uid="Disa.Framework.ThreadSafeList`1.Last*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Last" data-uid="Disa.Framework.ThreadSafeList`1.Last">Last()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T Last()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Remove__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Remove(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L103">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Remove_" data-uid="Disa.Framework.ThreadSafeList`1.Remove*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Remove__0_" data-uid="Disa.Framework.ThreadSafeList`1.Remove(`0)">Remove(T)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Remove(T item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.ICollection&lt;T&gt;.Remove(T)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L45">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_RemoveAt_" data-uid="Disa.Framework.ThreadSafeList`1.RemoveAt*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_RemoveAt_System_Int32_" data-uid="Disa.Framework.ThreadSafeList`1.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IList&lt;T&gt;.RemoveAt(System.Int32)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_ToArray.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.ToArray%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L170">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_ToArray_" data-uid="Disa.Framework.ThreadSafeList`1.ToArray*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_ToArray" data-uid="Disa.Framework.ThreadSafeList`1.ToArray">ToArray()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T[] ToArray()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>T[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_ToList.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.ToList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L162">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_ToList_" data-uid="Disa.Framework.ThreadSafeList`1.ToList*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_ToList" data-uid="Disa.Framework.ThreadSafeList`1.ToList">ToList()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;T&gt; ToList()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_Where_System_Func__0_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.Where(System.Func%7B%600%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L186">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_Where_" data-uid="Disa.Framework.ThreadSafeList`1.Where*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_Where_System_Func__0_System_Boolean__" data-uid="Disa.Framework.ThreadSafeList`1.Where(System.Func{`0,System.Boolean})">Where(Func&lt;T, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;T&gt; Where(Func&lt;T, bool&gt; predicate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">predicate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;T&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L207">View Source</a>
+  </span>
+  <a id="Disa_Framework_ThreadSafeList_1_System_Collections_IEnumerable_GetEnumerator_" data-uid="Disa.Framework.ThreadSafeList`1.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Disa_Framework_ThreadSafeList_1_System_Collections_IEnumerable_GetEnumerator" data-uid="Disa.Framework.ThreadSafeList`1.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_ThreadSafeList_1.md&amp;value=---%0Auid%3A%20Disa.Framework.ThreadSafeList%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ThreadSafeList.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

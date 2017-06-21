@@ -1,0 +1,776 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ZipStorer
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ZipStorer
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="System.IO.Compression.ZipStorer">
+  
+  
+  <h1 id="System_IO_Compression_ZipStorer" data-uid="System.IO.Compression.ZipStorer">Class ZipStorer
+  </h1>
+  <div class="markdown level0 summary"><p>Unique class for compression/decompression file. Represents a Zip file.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">ZipStorer</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="System.IO.Compression.html">System.IO.Compression</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="System_IO_Compression_ZipStorer_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ZipStorer : IDisposable</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_EncodeUTF8.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.EncodeUTF8%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L62">View Source</a>
+  </span>
+  <h4 id="System_IO_Compression_ZipStorer_EncodeUTF8" data-uid="System.IO.Compression.ZipStorer.EncodeUTF8">EncodeUTF8</h4>
+  <div class="markdown level1 summary"><p>True if UTF8 encoding for filename and comments, false if default (CP 437)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EncodeUTF8</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_ForceDeflating.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.ForceDeflating%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L64">View Source</a>
+  </span>
+  <h4 id="System_IO_Compression_ZipStorer_ForceDeflating" data-uid="System.IO.Compression.ZipStorer.ForceDeflating">ForceDeflating</h4>
+  <div class="markdown level1 summary"><p>Force deflate algotithm even if it inflates the stored file. Off by default.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceDeflating</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_AddFile_System_IO_Compression_ZipStorer_Compression_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.AddFile(System.IO.Compression.ZipStorer.Compression%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L181">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_AddFile_" data-uid="System.IO.Compression.ZipStorer.AddFile*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_AddFile_System_IO_Compression_ZipStorer_Compression_System_String_System_String_System_String_" data-uid="System.IO.Compression.ZipStorer.AddFile(System.IO.Compression.ZipStorer.Compression,System.String,System.String,System.String)">AddFile(ZipStorer.Compression, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Add full contents of a file into the Zip storage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddFile(ZipStorer.Compression _method, string _pathname, string _filenameInZip, string _comment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.Compression.html">ZipStorer.Compression</a></td>
+        <td><span class="parametername">_method</span></td>
+        <td><p>Compression method</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_pathname</span></td>
+        <td><p>Full path of file to add to Zip storage</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_filenameInZip</span></td>
+        <td><p>Filename and path as desired in Zip directory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_comment</span></td>
+        <td><p>Comment for stored file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_AddStream_System_IO_Compression_ZipStorer_Compression_System_String_System_IO_Stream_System_DateTime_System_String_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.AddStream(System.IO.Compression.ZipStorer.Compression%2CSystem.String%2CSystem.IO.Stream%2CSystem.DateTime%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L198">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_AddStream_" data-uid="System.IO.Compression.ZipStorer.AddStream*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_AddStream_System_IO_Compression_ZipStorer_Compression_System_String_System_IO_Stream_System_DateTime_System_String_" data-uid="System.IO.Compression.ZipStorer.AddStream(System.IO.Compression.ZipStorer.Compression,System.String,System.IO.Stream,System.DateTime,System.String)">AddStream(ZipStorer.Compression, String, Stream, DateTime, String)</h4>
+  <div class="markdown level1 summary"><p>Add full contents of a stream into the Zip storage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddStream(ZipStorer.Compression _method, string _filenameInZip, Stream _source, DateTime _modTime, string _comment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.Compression.html">ZipStorer.Compression</a></td>
+        <td><span class="parametername">_method</span></td>
+        <td><p>Compression method</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_filenameInZip</span></td>
+        <td><p>Filename and path as desired in Zip directory</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">_source</span></td>
+        <td><p>Stream object containing the data to store in Zip</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.DateTime</span></td>
+        <td><span class="parametername">_modTime</span></td>
+        <td><p>Modification time of the data to store</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_comment</span></td>
+        <td><p>Comment for stored file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Close.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L240">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Close_" data-uid="System.IO.Compression.ZipStorer.Close*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Close" data-uid="System.IO.Compression.ZipStorer.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Updates central directory (if pertinent) and close the Zip storage</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Close()</code></pre>
+  </div>
+  <h5 id="System_IO_Compression_ZipStorer_Close_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This is a required step, unless automatic dispose is used</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Create_System_IO_Stream_System_String_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Create(System.IO.Stream%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L129">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Create_" data-uid="System.IO.Compression.ZipStorer.Create*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Create_System_IO_Stream_System_String_" data-uid="System.IO.Compression.ZipStorer.Create(System.IO.Stream,System.String)">Create(Stream, String)</h4>
+  <div class="markdown level1 summary"><p>Method to create a new zip storage in a stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ZipStorer Create(Stream _stream, string _comment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">_stream</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_comment</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.html">ZipStorer</a></td>
+        <td><p>A valid ZipStorer object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Create_System_String_System_String_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Create(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L113">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Create_" data-uid="System.IO.Compression.ZipStorer.Create*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Create_System_String_System_String_" data-uid="System.IO.Compression.ZipStorer.Create(System.String,System.String)">Create(String, String)</h4>
+  <div class="markdown level1 summary"><p>Method to create a new storage file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ZipStorer Create(string _filename, string _comment)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_filename</span></td>
+        <td><p>Full path of Zip file to create</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_comment</span></td>
+        <td><p>General comment for Zip file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.html">ZipStorer</a></td>
+        <td><p>A valid ZipStorer object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Dispose.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L736">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Dispose_" data-uid="System.IO.Compression.ZipStorer.Dispose*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Dispose" data-uid="System.IO.Compression.ZipStorer.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Closes the Zip file stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.IDisposable.Dispose()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_IO_Stream_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.ExtractFile(System.IO.Compression.ZipStorer.ZipFileEntry%2CSystem.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L352">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_ExtractFile_" data-uid="System.IO.Compression.ZipStorer.ExtractFile*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_IO_Stream_" data-uid="System.IO.Compression.ZipStorer.ExtractFile(System.IO.Compression.ZipStorer.ZipFileEntry,System.IO.Stream)">ExtractFile(ZipStorer.ZipFileEntry, Stream)</h4>
+  <div class="markdown level1 summary"><p>Copy the contents of a stored file into an opened stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractFile(ZipStorer.ZipFileEntry _zfe, Stream _stream)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.ZipFileEntry.html">ZipStorer.ZipFileEntry</a></td>
+        <td><span class="parametername">_zfe</span></td>
+        <td><p>Entry information of file to extract</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">_stream</span></td>
+        <td><p>Stream to store the uncompressed data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if success, false if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_IO_Stream__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unique compression methods are Store and Deflate</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_String_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.ExtractFile(System.IO.Compression.ZipStorer.ZipFileEntry%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L327">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_ExtractFile_" data-uid="System.IO.Compression.ZipStorer.ExtractFile*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_String_" data-uid="System.IO.Compression.ZipStorer.ExtractFile(System.IO.Compression.ZipStorer.ZipFileEntry,System.String)">ExtractFile(ZipStorer.ZipFileEntry, String)</h4>
+  <div class="markdown level1 summary"><p>Copy the contents of a stored file into a physical file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ExtractFile(ZipStorer.ZipFileEntry _zfe, string _filename)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.ZipFileEntry.html">ZipStorer.ZipFileEntry</a></td>
+        <td><span class="parametername">_zfe</span></td>
+        <td><p>Entry information of file to extract</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_filename</span></td>
+        <td><p>Name of file to store uncompressed data</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if success, false if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="System_IO_Compression_ZipStorer_ExtractFile_System_IO_Compression_ZipStorer_ZipFileEntry_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Unique compression methods are Store and Deflate</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Open_System_IO_Stream_System_IO_FileAccess_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Open(System.IO.Stream%2CSystem.IO.FileAccess)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L159">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Open_" data-uid="System.IO.Compression.ZipStorer.Open*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Open_System_IO_Stream_System_IO_FileAccess_" data-uid="System.IO.Compression.ZipStorer.Open(System.IO.Stream,System.IO.FileAccess)">Open(Stream, FileAccess)</h4>
+  <div class="markdown level1 summary"><p>Method to open an existing storage from stream</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ZipStorer Open(Stream _stream, FileAccess _access)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IO.Stream</span></td>
+        <td><span class="parametername">_stream</span></td>
+        <td><p>Already opened stream with zip contents</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.FileAccess</span></td>
+        <td><span class="parametername">_access</span></td>
+        <td><p>File access mode for stream operations</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.html">ZipStorer</a></td>
+        <td><p>A valid ZipStorer object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_Open_System_String_System_IO_FileAccess_.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.Open(System.String%2CSystem.IO.FileAccess)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L144">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_Open_" data-uid="System.IO.Compression.ZipStorer.Open*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_Open_System_String_System_IO_FileAccess_" data-uid="System.IO.Compression.ZipStorer.Open(System.String,System.IO.FileAccess)">Open(String, FileAccess)</h4>
+  <div class="markdown level1 summary"><p>Method to open an existing storage file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ZipStorer Open(string _filename, FileAccess _access)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">_filename</span></td>
+        <td><p>Full path of Zip file to open</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.FileAccess</span></td>
+        <td><span class="parametername">_access</span></td>
+        <td><p>File access mode as used in FileStream constructor</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.html">ZipStorer</a></td>
+        <td><p>A valid ZipStorer object</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_ReadCentralDir.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.ReadCentralDir%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L274">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_ReadCentralDir_" data-uid="System.IO.Compression.ZipStorer.ReadCentralDir*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_ReadCentralDir" data-uid="System.IO.Compression.ZipStorer.ReadCentralDir">ReadCentralDir()</h4>
+  <div class="markdown level1 summary"><p>Read all the file records in the central directory </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;ZipStorer.ZipFileEntry&gt; ReadCentralDir()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="System.IO.Compression.ZipStorer.ZipFileEntry.html">ZipStorer.ZipFileEntry</a>&gt;</td>
+        <td><p>List of all entries in directory</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer_RemoveEntries_System_IO_Compression_ZipStorer__System_Collections_Generic_List_System_IO_Compression_ZipStorer_ZipFileEntry__.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer.RemoveEntries(System.IO.Compression.ZipStorer%40%2CSystem.Collections.Generic.List%7BSystem.IO.Compression.ZipStorer.ZipFileEntry%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L396">View Source</a>
+  </span>
+  <a id="System_IO_Compression_ZipStorer_RemoveEntries_" data-uid="System.IO.Compression.ZipStorer.RemoveEntries*"></a>
+  <h4 id="System_IO_Compression_ZipStorer_RemoveEntries_System_IO_Compression_ZipStorer__System_Collections_Generic_List_System_IO_Compression_ZipStorer_ZipFileEntry__" data-uid="System.IO.Compression.ZipStorer.RemoveEntries(System.IO.Compression.ZipStorer@,System.Collections.Generic.List{System.IO.Compression.ZipStorer.ZipFileEntry})">RemoveEntries(ref ZipStorer, List&lt;ZipStorer.ZipFileEntry&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes one of many files in storage. It creates a new Zip file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool RemoveEntries(ref ZipStorer _zip, List&lt;ZipStorer.ZipFileEntry&gt; _zfes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="System.IO.Compression.ZipStorer.html">ZipStorer</a></td>
+        <td><span class="parametername">_zip</span></td>
+        <td><p>Reference to the current Zip object</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="System.IO.Compression.ZipStorer.ZipFileEntry.html">ZipStorer.ZipFileEntry</a>&gt;</td>
+        <td><span class="parametername">_zfes</span></td>
+        <td><p>List of Entries to remove from storage</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if success, false if not</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="System_IO_Compression_ZipStorer_RemoveEntries_System_IO_Compression_ZipStorer__System_Collections_Generic_List_System_IO_Compression_ZipStorer_ZipFileEntry___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This method only works for storage of type FileStream</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=System_IO_Compression_ZipStorer.md&amp;value=---%0Auid%3A%20System.IO.Compression.ZipStorer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/ZipStorer.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

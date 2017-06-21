@@ -1,0 +1,361 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPrivacyList
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPrivacyList
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Disa.Framework.IPrivacyList">
+  
+  
+  <h1 id="Disa_Framework_IPrivacyList" data-uid="Disa.Framework.IPrivacyList">Interface IPrivacyList
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Disa.Framework.html">Disa.Framework</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="Disa_Framework_IPrivacyList_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPrivacyList</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList_ConvertContactIdToParticipant_Disa_Framework_Contact_Disa_Framework_Contact_ID_System_Action_Disa_Framework_DisaParticipant__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList.ConvertContactIdToParticipant(Disa.Framework.Contact%2CDisa.Framework.Contact.ID%2CSystem.Action%7BDisa.Framework.DisaParticipant%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L17">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPrivacyList_ConvertContactIdToParticipant_" data-uid="Disa.Framework.IPrivacyList.ConvertContactIdToParticipant*"></a>
+  <h4 id="Disa_Framework_IPrivacyList_ConvertContactIdToParticipant_Disa_Framework_Contact_Disa_Framework_Contact_ID_System_Action_Disa_Framework_DisaParticipant__" data-uid="Disa.Framework.IPrivacyList.ConvertContactIdToParticipant(Disa.Framework.Contact,Disa.Framework.Contact.ID,System.Action{Disa.Framework.DisaParticipant})">ConvertContactIdToParticipant(Contact, Contact.ID, Action&lt;DisaParticipant&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task ConvertContactIdToParticipant(Contact contact, Contact.ID contactId, Action&lt;DisaParticipant&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.Contact.html">Contact</a></td>
+        <td><span class="parametername">contact</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.Contact.ID.html">Contact.ID</a></td>
+        <td><span class="parametername">contactId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Disa.Framework.DisaParticipant.html">DisaParticipant</a>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList_GetAddressPicture_System_String_System_Action_Disa_Framework_DisaThumbnail__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList.GetAddressPicture(System.String%2CSystem.Action%7BDisa.Framework.DisaThumbnail%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L13">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPrivacyList_GetAddressPicture_" data-uid="Disa.Framework.IPrivacyList.GetAddressPicture*"></a>
+  <h4 id="Disa_Framework_IPrivacyList_GetAddressPicture_System_String_System_Action_Disa_Framework_DisaThumbnail__" data-uid="Disa.Framework.IPrivacyList.GetAddressPicture(System.String,System.Action{Disa.Framework.DisaThumbnail})">GetAddressPicture(String, Action&lt;DisaThumbnail&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetAddressPicture(string address, Action&lt;DisaThumbnail&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Disa.Framework.DisaThumbnail.html">DisaThumbnail</a>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList_GetAddressTitle_System_String_System_Action_System_String__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList.GetAddressTitle(System.String%2CSystem.Action%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L15">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPrivacyList_GetAddressTitle_" data-uid="Disa.Framework.IPrivacyList.GetAddressTitle*"></a>
+  <h4 id="Disa_Framework_IPrivacyList_GetAddressTitle_System_String_System_Action_System_String__" data-uid="Disa.Framework.IPrivacyList.GetAddressTitle(System.String,System.Action{System.String})">GetAddressTitle(String, Action&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetAddressTitle(string address, Action&lt;string&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList_GetPrivacyList_System_Action_System_String____.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList.GetPrivacyList(System.Action%7BSystem.String%5B%5D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L9">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPrivacyList_GetPrivacyList_" data-uid="Disa.Framework.IPrivacyList.GetPrivacyList*"></a>
+  <h4 id="Disa_Framework_IPrivacyList_GetPrivacyList_System_Action_System_String____" data-uid="Disa.Framework.IPrivacyList.GetPrivacyList(System.Action{System.String[]})">GetPrivacyList(Action&lt;String[]&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetPrivacyList(Action&lt;string[]&gt; addresses)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>[]&gt;</td>
+        <td><span class="parametername">addresses</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList_SetPrivacyList_System_String___.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList.SetPrivacyList(System.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L11">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPrivacyList_SetPrivacyList_" data-uid="Disa.Framework.IPrivacyList.SetPrivacyList*"></a>
+  <h4 id="Disa_Framework_IPrivacyList_SetPrivacyList_System_String___" data-uid="Disa.Framework.IPrivacyList.SetPrivacyList(System.String[])">SetPrivacyList(String[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SetPrivacyList(string[] addresses)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span>[]</td>
+        <td><span class="parametername">addresses</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPrivacyList.md&amp;value=---%0Auid%3A%20Disa.Framework.IPrivacyList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPrivacyList.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

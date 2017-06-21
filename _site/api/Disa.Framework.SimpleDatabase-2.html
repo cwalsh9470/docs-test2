@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SimpleDatabase&lt;TObject, TSerializable&gt;
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SimpleDatabase&lt;TObject, TSerializable&gt;
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Disa.Framework.SimpleDatabase`2">
+  
+  
+  <h1 id="Disa_Framework_SimpleDatabase_2" data-uid="Disa.Framework.SimpleDatabase`2">Class SimpleDatabase&lt;TObject, TSerializable&gt;
+  </h1>
+  <div class="markdown level0 summary"><p>This is a very primitive database. When Remove is called, the whole list gets resaved. Therefore, the class
+is only designed to be used on small lists (e.g. saving sent receipts to be paried up with their received counterparts).</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">SimpleDatabase&lt;TObject, TSerializable&gt;</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Disa.Framework.html">Disa.Framework</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="Disa_Framework_SimpleDatabase_2_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SimpleDatabase&lt;TObject, TSerializable&gt; : IEnumerable&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt;, IEnumerable</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TObject</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TSerializable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2__ctor_System_String_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.%23ctor(System.String%2CSystem.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L26">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2__ctor_" data-uid="Disa.Framework.SimpleDatabase`2.#ctor*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2__ctor_System_String_System_Boolean_System_Int32_" data-uid="Disa.Framework.SimpleDatabase`2.#ctor(System.String,System.Boolean,System.Int32)">SimpleDatabase(String, Boolean, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleDatabase(string fileName, bool truncate = false, int truncateDifference = 604800)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">truncate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">truncateDifference</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2__ctor_System_String_System_String_System_Boolean_System_Int32_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.%23ctor(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L37">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2__ctor_" data-uid="Disa.Framework.SimpleDatabase`2.#ctor*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2__ctor_System_String_System_String_System_Boolean_System_Int32_" data-uid="Disa.Framework.SimpleDatabase`2.#ctor(System.String,System.String,System.Boolean,System.Int32)">SimpleDatabase(String, String, Boolean, Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleDatabase(string settingsPath, string fileName, bool truncate = false, int truncateDifference = 604800)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">settingsPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">fileName</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">truncate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">truncateDifference</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Add__0__1_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Add(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L54">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Add_" data-uid="Disa.Framework.SimpleDatabase`2.Add*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Add__0__1_" data-uid="Disa.Framework.SimpleDatabase`2.Add(`0,`1)">Add(TObject, TSerializable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(TObject object, TSerializable serialiable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TObject</span></td>
+        <td><span class="parametername">object</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSerializable</span></td>
+        <td><span class="parametername">serialiable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Add_Disa_Framework_SimpleDatabase__0__1__Container_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Add(Disa.Framework.SimpleDatabase%7B%600%2C%601%7D.Container)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L49">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Add_" data-uid="Disa.Framework.SimpleDatabase`2.Add*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Add_Disa_Framework_SimpleDatabase__0__1__Container_" data-uid="Disa.Framework.SimpleDatabase`2.Add(Disa.Framework.SimpleDatabase{`0,`1}.Container)">Add(SimpleDatabase&lt;TObject, TSerializable&gt;.Container)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(SimpleDatabase&lt;TObject, TSerializable&gt;.Container item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.SimpleDatabase-2.Container.html">SimpleDatabase.Container</a>&lt;&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Add_System_Collections_Generic_IEnumerable_Disa_Framework_SimpleDatabase__0__1__Container__.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Add(System.Collections.Generic.IEnumerable%7BDisa.Framework.SimpleDatabase%7B%600%2C%601%7D.Container%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L68">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Add_" data-uid="Disa.Framework.SimpleDatabase`2.Add*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Add_System_Collections_Generic_IEnumerable_Disa_Framework_SimpleDatabase__0__1__Container__" data-uid="Disa.Framework.SimpleDatabase`2.Add(System.Collections.Generic.IEnumerable{Disa.Framework.SimpleDatabase{`0,`1}.Container})">Add(IEnumerable&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Add(IEnumerable&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Disa.Framework.SimpleDatabase-2.Container.html">SimpleDatabase.Container</a>&lt;&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Clear.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L59">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Clear_" data-uid="Disa.Framework.SimpleDatabase`2.Clear*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Clear" data-uid="Disa.Framework.SimpleDatabase`2.Clear">Clear()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_GetEnumerator.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L127">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_GetEnumerator_" data-uid="Disa.Framework.SimpleDatabase`2.GetEnumerator*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_GetEnumerator" data-uid="Disa.Framework.SimpleDatabase`2.GetEnumerator">GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerator&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt; GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerator</span>&lt;<a class="xref" href="Disa.Framework.SimpleDatabase-2.Container.html">SimpleDatabase.Container</a>&lt;&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Remove__0_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Remove(%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L81">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Remove_" data-uid="Disa.Framework.SimpleDatabase`2.Remove*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Remove__0_" data-uid="Disa.Framework.SimpleDatabase`2.Remove(`0)">Remove(TObject)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(TObject object)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TObject</span></td>
+        <td><span class="parametername">object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Remove__0__1_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Remove(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L86">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Remove_" data-uid="Disa.Framework.SimpleDatabase`2.Remove*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Remove__0__1_" data-uid="Disa.Framework.SimpleDatabase`2.Remove(`0,`1)">Remove(TObject, TSerializable)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(TObject object, TSerializable serialiable)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TObject</span></td>
+        <td><span class="parametername">object</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TSerializable</span></td>
+        <td><span class="parametername">serialiable</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Remove_Disa_Framework_SimpleDatabase__0__1__Container_.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Remove(Disa.Framework.SimpleDatabase%7B%600%2C%601%7D.Container)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L91">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Remove_" data-uid="Disa.Framework.SimpleDatabase`2.Remove*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Remove_Disa_Framework_SimpleDatabase__0__1__Container_" data-uid="Disa.Framework.SimpleDatabase`2.Remove(Disa.Framework.SimpleDatabase{`0,`1}.Container)">Remove(SimpleDatabase&lt;TObject, TSerializable&gt;.Container)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(SimpleDatabase&lt;TObject, TSerializable&gt;.Container item)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.SimpleDatabase-2.Container.html">SimpleDatabase.Container</a>&lt;&gt;</td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Remove_System_Collections_Generic_IEnumerable__0__.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Remove(System.Collections.Generic.IEnumerable%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L96">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Remove_" data-uid="Disa.Framework.SimpleDatabase`2.Remove*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Remove_System_Collections_Generic_IEnumerable__0__" data-uid="Disa.Framework.SimpleDatabase`2.Remove(System.Collections.Generic.IEnumerable{`0})">Remove(IEnumerable&lt;TObject&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(IEnumerable&lt;TObject&gt; objects)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;TObject&gt;</td>
+        <td><span class="parametername">objects</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_Remove_System_Collections_Generic_IEnumerable_Disa_Framework_SimpleDatabase__0__1__Container__.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.Remove(System.Collections.Generic.IEnumerable%7BDisa.Framework.SimpleDatabase%7B%600%2C%601%7D.Container%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L109">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_Remove_" data-uid="Disa.Framework.SimpleDatabase`2.Remove*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_Remove_System_Collections_Generic_IEnumerable_Disa_Framework_SimpleDatabase__0__1__Container__" data-uid="Disa.Framework.SimpleDatabase`2.Remove(System.Collections.Generic.IEnumerable{Disa.Framework.SimpleDatabase{`0,`1}.Container})">Remove(IEnumerable&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Remove(IEnumerable&lt;SimpleDatabase&lt;TObject, TSerializable&gt;.Container&gt; items)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Disa.Framework.SimpleDatabase-2.Container.html">SimpleDatabase.Container</a>&lt;&gt;&gt;</td>
+        <td><span class="parametername">items</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_SaveChanges.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.SaveChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L122">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_SaveChanges_" data-uid="Disa.Framework.SimpleDatabase`2.SaveChanges*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_SaveChanges" data-uid="Disa.Framework.SimpleDatabase`2.SaveChanges">SaveChanges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SaveChanges()</code></pre>
+  </div>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2_System_Collections_IEnumerable_GetEnumerator.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602.System%23Collections%23IEnumerable%23GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L135">View Source</a>
+  </span>
+  <a id="Disa_Framework_SimpleDatabase_2_System_Collections_IEnumerable_GetEnumerator_" data-uid="Disa.Framework.SimpleDatabase`2.System#Collections#IEnumerable#GetEnumerator*"></a>
+  <h4 id="Disa_Framework_SimpleDatabase_2_System_Collections_IEnumerable_GetEnumerator" data-uid="Disa.Framework.SimpleDatabase`2.System#Collections#IEnumerable#GetEnumerator">IEnumerable.GetEnumerator()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IEnumerator IEnumerable.GetEnumerator()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.IEnumerator</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="implements">Implements</h5>
+      <div><span class="xref">System.Collections.IEnumerable.GetEnumerator()</span></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_SimpleDatabase_2.md&amp;value=---%0Auid%3A%20Disa.Framework.SimpleDatabase%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/SimpleDatabase.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

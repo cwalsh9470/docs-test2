@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IPartyBlockedParticipants
+   | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IPartyBlockedParticipants
+   | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../articles/toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Disa.Framework.IPartyBlockedParticipants">
+  
+  
+  <h1 id="Disa_Framework_IPartyBlockedParticipants" data-uid="Disa.Framework.IPartyBlockedParticipants">Interface IPartyBlockedParticipants
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Disa.Framework.html">Disa.Framework</a></h6>
+  <h6><strong>Assembly</strong>: Disa.Framework.dll</h6>
+  <h5 id="Disa_Framework_IPartyBlockedParticipants_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IPartyBlockedParticipants</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPartyBlockedParticipants_CanPartyUnblockParticipants_Disa_Framework_BubbleGroup_System_Action_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPartyBlockedParticipants.CanPartyUnblockParticipants(Disa.Framework.BubbleGroup%2CSystem.Action%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPartyBlockedParticipants.cs/#L35">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPartyBlockedParticipants_CanPartyUnblockParticipants_" data-uid="Disa.Framework.IPartyBlockedParticipants.CanPartyUnblockParticipants*"></a>
+  <h4 id="Disa_Framework_IPartyBlockedParticipants_CanPartyUnblockParticipants_Disa_Framework_BubbleGroup_System_Action_System_Boolean__" data-uid="Disa.Framework.IPartyBlockedParticipants.CanPartyUnblockParticipants(Disa.Framework.BubbleGroup,System.Action{System.Boolean})">CanPartyUnblockParticipants(BubbleGroup, Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result as true if the current user can unblock participants, false otherwise</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task CanPartyUnblockParticipants(BubbleGroup group, Action&lt;bool&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The BubbleGroup in context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result Action to set the array of DisaParticipants on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>The party unblock participants.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipantPicture_Disa_Framework_BubbleGroup_System_String_System_Action_Disa_Framework_DisaThumbnail__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipantPicture(Disa.Framework.BubbleGroup%2CSystem.String%2CSystem.Action%7BDisa.Framework.DisaThumbnail%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPartyBlockedParticipants.cs/#L52">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipantPicture_" data-uid="Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipantPicture*"></a>
+  <h4 id="Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipantPicture_Disa_Framework_BubbleGroup_System_String_System_Action_Disa_Framework_DisaThumbnail__" data-uid="Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipantPicture(Disa.Framework.BubbleGroup,System.String,System.Action{Disa.Framework.DisaThumbnail})">GetPartyBlockedParticipantPicture(BubbleGroup, String, Action&lt;DisaThumbnail&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result as true if the unblocking was successful, false otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetPartyBlockedParticipantPicture(BubbleGroup group, string address, Action&lt;DisaThumbnail&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The BubbleGroup in context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>the address of whom the Disa thumbnail is needed</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Disa.Framework.DisaThumbnail.html">DisaThumbnail</a>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result Action to set the DisaThumbnail on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that sets the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipants_Disa_Framework_BubbleGroup_System_Action_Disa_Framework_DisaParticipant____.md&amp;value=---%0Auid%3A%20Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipants(Disa.Framework.BubbleGroup%2CSystem.Action%7BDisa.Framework.DisaParticipant%5B%5D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPartyBlockedParticipants.cs/#L28">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipants_" data-uid="Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipants*"></a>
+  <h4 id="Disa_Framework_IPartyBlockedParticipants_GetPartyBlockedParticipants_Disa_Framework_BubbleGroup_System_Action_Disa_Framework_DisaParticipant____" data-uid="Disa.Framework.IPartyBlockedParticipants.GetPartyBlockedParticipants(Disa.Framework.BubbleGroup,System.Action{Disa.Framework.DisaParticipant[]})">GetPartyBlockedParticipants(BubbleGroup, Action&lt;DisaParticipant[]&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result of this with an array of DisaParticipants which are blocked for this party.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task GetPartyBlockedParticipants(BubbleGroup group, Action&lt;DisaParticipant[]&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The BubbleGroup in context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Disa.Framework.DisaParticipant.html">DisaParticipant</a>[]&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result Action to set the array of DisaParticipants on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that sets the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPartyBlockedParticipants_UnblockPartyParticipant_Disa_Framework_BubbleGroup_Disa_Framework_DisaParticipant_System_Action_System_Boolean__.md&amp;value=---%0Auid%3A%20Disa.Framework.IPartyBlockedParticipants.UnblockPartyParticipant(Disa.Framework.BubbleGroup%2CDisa.Framework.DisaParticipant%2CSystem.Action%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPartyBlockedParticipants.cs/#L43">View Source</a>
+  </span>
+  <a id="Disa_Framework_IPartyBlockedParticipants_UnblockPartyParticipant_" data-uid="Disa.Framework.IPartyBlockedParticipants.UnblockPartyParticipant*"></a>
+  <h4 id="Disa_Framework_IPartyBlockedParticipants_UnblockPartyParticipant_Disa_Framework_BubbleGroup_Disa_Framework_DisaParticipant_System_Action_System_Boolean__" data-uid="Disa.Framework.IPartyBlockedParticipants.UnblockPartyParticipant(Disa.Framework.BubbleGroup,Disa.Framework.DisaParticipant,System.Action{System.Boolean})">UnblockPartyParticipant(BubbleGroup, DisaParticipant, Action&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Set the result as true if the unblocking was successful, false otherwise, false otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task UnblockPartyParticipant(BubbleGroup group, DisaParticipant participant, Action&lt;bool&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.BubbleGroup.html">BubbleGroup</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The BubbleGroup in context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Disa.Framework.DisaParticipant.html">DisaParticipant</a></td>
+        <td><span class="parametername">participant</span></td>
+        <td><p>The Participant to unblock</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>The result Action to set the array of DisaParticipants on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td><p>A task that sets the result.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/new/alpha/apiSpec/new?filename=Disa_Framework_IPartyBlockedParticipants.md&amp;value=---%0Auid%3A%20Disa.Framework.IPartyBlockedParticipants%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Disa.Framework.Shared/IPartyBlockedParticipants.cs/#L6" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

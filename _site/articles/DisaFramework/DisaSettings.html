@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Disa Settings | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Disa Settings | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="disa-settings">Disa Settings</h1>
+
+<p>The Disa Framework provides four categories of settings that you should be familiar with to support your Plugin&#39;s needs.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DisaSettings</code></td>
+<td>A settings store of your service. You can use this to store any information.</td>
+</tr>
+<tr>
+<td><code>DisaMutableSettings</code></td>
+<td>Use <code>DisaMutableSettings</code> and <code>MutableSettingsManager</code> to save information you find yourself frequently saving (such as a timestamp you need to keep updated everytime the service is started).</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PluginSettingsUI/IPluginPage</td>
+<td>Plugin defined Xamarin.Forms page or pages to present a UI to capture settings from the user</td>
+</tr>
+<tr>
+<td><code>DisaServiceUserSettings</code></td>
+<td>User settings such as <code>Ringtone</code> and <code>VibrateOption</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="disasettings">DisaSettings</h2>
+<p><strong>Setup and Initialization</strong></p>
+<p>Typically you will derive a class from <code>DisaSettings</code> to hold your Plugin specific settings. While we haven&#39;t discussed implementing your Plugin <code>Service</code> class yet, we can briefly mention the touch-points for your <code>DisaSettings</code>. The <code>ServiceInfo</code> attribute on your <code>Service</code> class takes a <code>Type</code> parameter of your <code>DisaSettings</code> derived class as can be seen here:</p>
+<pre><code>[ServiceInfo(&quot;WackyMessenger&quot;, true, false, false, false, false, typeof(WackyMessengerSettings), 
+        ServiceInfo.ProcedureType.ConnectAuthenticate, typeof(TextBubble))]
+</code></pre><p>This will have the effect of storing away a <code>ServiceName</code> (&quot;WackyMessenger&quot;) and a  <code>Type</code> (typeof(WackyMessengerSettings)) for your <code>DisaSettings</code> derived class at:</p>
+<pre><code>Service.Information.ServiceName
+</code></pre><p>and</p>
+<pre><code>Service.Information.Settings
+</code></pre><p>We&#39;ll see how this is used shortly. Now when your Plugin&#39;s <code>Service</code> derived class instance is started, the first thing that happens is that your override of <code>InitializeDefault()</code> is called. It attempts to try and start the service without any settings. If this method returns true, it is assumed your service doesn&#39;t need any settings. If this method returns false, then <code>InitializeDefault(DisaSettings)</code> is called - the framework will provide you with your stored settings at this point.</p>
+<p><strong>Managing</strong></p>
+<p><code>Disa.Framework.SettingsManager</code> manages saving, loading and deleting your <code>DisaSettings</code> derived class instance. Whenever you want to save your settings, you can call <code>SettingsManager.Save</code>.</p>
+<pre><code>public static void Save(Service service, DisaSettings settings)
+</code></pre><p>This method will first determine a path for your settings based on the <code>Service.Information.ServiceName</code>:</p>
+<pre><code>Path.Combine(Platform.GetSettingsPath(), service.Information.ServiceName + &quot;.xml&quot;);
+</code></pre><p>It will then hand-off completion of saving to:</p>
+<pre><code>public static void Save(Stream fs, Type settingsType, DisaSettings settings)
+</code></pre><p>And here we see how the <code>Type</code> you originally specified for your settings is used to serialize an XML representation of your settings:</p>
+<pre><code>var serializerObj = new XmlSerializer(settingsType);
+serializerObj.Serialize(fs, settings);
+</code></pre><p>Since your settings are based off of your <code>ServiceName</code>, loading and deleting your settings have simple APIs:</p>
+<pre><code>public static DisaSettings Load(Service ds)
+public static void Delete(Service service)
+</code></pre><p>Note that if your settings have not been saved out yet, <code>Load</code> will return <code>null</code>.</p>
+<p>Additional public API&#39;s are availalbe in SettingsManager for loading and saving that allow you to specify stream, settings path, etc.</p>
+<h2 id="disamutablesettings">DisaMutableSettings</h2>
+<p><strong>Setup</strong></p>
+<p>Typically you will derive a class from <code>DisaMutableSettings</code> to hold frequently changing settings.</p>
+<p><strong>Managing</strong></p>
+<p><code>Disa.Framework.MutableSettingsManager</code> manages saving, loading and deleting your <code>DisaMutableSettings</code> derived class instance. Whenever you want to save your settings, you can call <code>MutableSettingsManager.Save</code>.</p>
+<pre><code>public static void Save&lt;T&gt;(T settings) where T : DisaMutableSettings
+</code></pre><p>This method will call out to </p>
+<pre><code>Save(typeof(T).Name, settings);
+</code></pre><p>Following this through we see that your DisaMutableSettings derived class will be serialized out to XML at:</p>
+<pre><code>Path.Combine(Platform.GetSettingsPath(), name + &quot;.xml&quot;);
+</code></pre><p>Where <code>name</code> here is the class name of your <code>DisaMutableSettings</code> derived class.</p>
+<p>Since your settings are based off of your class name, loading and deleting your settings have simple APIs:</p>
+<pre><code>public static T Load&lt;T&gt;() where T : DisaMutableSettings
+public static void Delete&lt;T&gt;() where T : DisaMutableSettings
+</code></pre><p>Note, that in this case, <code>Load</code> will create an appropriate instance of your settings if a file backing has not been saved out yet:</p>
+<pre><code>private static DisaMutableSettings Load(string name, 
+                                        Type settings)
+{
+    .
+    .
+    .
+    return Activator.CreateInstance(settings)
+        as DisaMutableSettings;
+}
+</code></pre><h2 id="pluginsettingsuiipluginpage">PluginSettingsUI/IPluginPage</h2>
+<p>Disa Plugins can present a Xamarin.Forms based UI to expose settings necessary for initializing and modifying attributes for their needs. An example would be to allow a user to input credentials to identify the user to a particular messaging back-end. </p>
+<p>To indicate to the Disa Framework a designated class for this, you annotate a class with the <code>Disa.Framework.PluginSettingsUI</code> attribute. You pass in the <code>Type</code> of your Plugin&#39;s <code>Service</code> derived class. Once you have identified a class with the <code>PluginSettingsUI</code> attribute, you can implement the <code>Disa.Framework.Mobile.IPluginPage</code> interface&#39;s <code>Fetch</code> method to return a Xamarin.Forms <code>Page</code> to present a UI to capture/modify settings particular to your Plugin.</p>
+<h2 id="disaserviceusersettings">DisaServiceUserSettings</h2>
+<p><strong>Setup</strong></p>
+<p>Recall in <code>PlatformManager.InitializeMain</code> the call to <code>ServiceUserSettingsManager.LoadAll</code>. If we dig into this we see that we loop over <code>ServiceManager</code>&#39;s <code>AllNoUnified</code> collection of <code>Service</code>s. For each Plugin <code>Service</code> we call <code>ServiceUserSettingsManager.Load</code>. While this is a similar XML serialization/deserialization setup that we have seen above for the other settings, the important detail to note here is the determination of the settings path. The critical function to examine is listed here:</p>
+<pre><code>private static string GetBaseLocation()
+{
+    var databasePath = Platform.GetDatabasePath();
+    if (!Directory.Exists(databasePath))
+    {
+        Utils.DebugPrint(&quot;Creating database directory.&quot;);
+        Directory.CreateDirectory(databasePath);
+    }
+
+    var bubbleGroupsSettingsBasePath = Path.Combine(databasePath,
+        &quot;serviceusersettings&quot;);
+    if (!Directory.Exists(bubbleGroupsSettingsBasePath))
+    {
+        Utils.DebugPrint(
+            &quot;Creating bubble service user settings base directory.&quot;);
+        Directory.CreateDirectory(bubbleGroupsSettingsBasePath);
+    }
+
+    return bubbleGroupsSettingsBasePath;
+}
+</code></pre><p>First, we determine, and create if necessary, the platform specific directory for our database location. Then, we append &quot;serviceusersettings&quot; and create, if necessary, this subdirectory. OK, with this location in hand, let&#39;s see how it is used. The critical function here is listed below:</p>
+<pre><code>private static string GetPath(Service service)
+{
+    return Path.Combine(GetBaseLocation(), 
+        service.Information.ServiceName + &quot;.xml&quot;);
+}
+</code></pre><p>OK, we are familiar with this now. The <code>DisaUserSettings</code> for a particular Plugin is stored using the Plugin&#39;s <code>ServiceName</code>. For example, for the Telegram plugin, the path would be something like:</p>
+<pre><code>&lt;database path&gt;\serviceusersettings\Telegram.xml
+</code></pre><p><strong>Managing</strong></p>
+<p>Currently, <code>DisaUserSettings</code> are typically managed by the Disa front-end. Here is a listing of the current settings maintained:</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NotificationLed</td>
+<td></td>
+</tr>
+<tr>
+<td>Ringtone</td>
+<td></td>
+</tr>
+<tr>
+<td>BlockNotifications</td>
+<td></td>
+</tr>
+<tr>
+<td>ServiceColor</td>
+<td></td>
+</tr>
+<tr>
+<td>VibrateOption</td>
+<td></td>
+</tr>
+<tr>
+<td>VibrateOptionCustomPattern</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Docs/articles/DisaFramework/DisaSettings.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

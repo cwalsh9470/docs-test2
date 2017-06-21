@@ -1,0 +1,39 @@
+@import url('/styles/disa.css');
+
+.container {
+    margin-right: 64px;
+    margin-left: 64px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+/* override of docfx version */
+.sidefilter {
+    top: 164px;
+    background-color: transparent;
+    padding: 0px 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 0;
+    width: 260px;
+    height: 36px;
+    line-height: 1.8;
+}
+
+.toc-filter {
+    padding: 0px;
+    margin: 0px;
+}
+
+.sidetoc {
+    top: 196px;
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+}
+.toc {
+    background-color: transparent;
+}
+
+body .toc {
+    background-color: transparent;
+}

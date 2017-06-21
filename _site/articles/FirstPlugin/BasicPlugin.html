@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>The Most Basic Plugin | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="The Most Basic Plugin | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="the-most-basic-plugin">The Most Basic Plugin</h1>
+
+<h2 id="abstract">Abstract</h2>
+<p>If you ventured into here by now, you&#39;re probably wanting to know how to start building a plugin.</p>
+<p>This tutorial will guide you into building a very basic plugin for WackyMessenger (a made-up service). WackyMessenger is incredibly basic - it only supports text messages. When a user sends a text message, it waits a few seconds, and then responds to the user with his or her message reversed.</p>
+<p>The source to this plugin can be found in full under the Examples/TheMostBasicPlugin folder in the main directory.</p>
+<h2 id="setting-up-your-ide">Setting Up Your IDE</h2>
+<p>Alright, to begin! You need to setup your IDE. We&#39;ll be using Xamarin Studio (as I am on a Mac). However, Visual Studio works just fine too and you should be able to follow along easily. If not, send us an email at opensource@disa.im and we&#39;ll figure it out.</p>
+<p>First, clone or download this repo. Then, open it. You should be presented with a screen similar to this:</p>
+<p><img src="../../images/FirstPlugin/SettingUpYourIDE.png" alt="setting up your ide"></p>
+<p>Now, lets add our WackyMessenger project. Add a new Library project (not the PCL one!) by choosing .NET from &quot;Other&quot;, then choosing &quot;Library&quot;, and calling it Disa.Framework.WackyMessenger.</p>
+<p>Aside: for plugins to properly work, they need to be labelled with the Disa.Framework prefix. If for example, I was writing a Telegram plugin, I&#39;d label the plugin project Disa.Framework.Telegram.
+There will now be three projects in your solution:</p>
+<p><img src="../../images/FirstPlugin/ThreeProjectsInSolution.png" alt="setting up your ide"></p>
+<p>Go ahead, and add Disa.Framework as a reference to Disa.Framework.WackyMessenger. Then, add Disa.Framework.WackyMessenger as a reference to Disa.Terminal. You&#39;ll now be left with the following:</p>
+<p><img src="../../images/FirstPlugin/ThreeProjectsInSolutionReferences.png" alt="setting up your ide"></p>
+<p>Wonderful! Now we&#39;re ready to add the service skeleton.</p>
+<p>Add the Service Skeleton</p>
+<p>Create a new file in Disa.Framework.WackyMessenger, calling it WackyMessenger.cs.</p>
+<p>Paste the following into the file:</p>
+<pre><code>using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Disa.Framework.Bubbles;
+
+namespace Disa.Framework.WackyMessenger
+{
+    [ServiceInfo(&quot;WackyMessenger&quot;, true, false, false, false, false, typeof(WackyMessengerSettings), 
+        ServiceInfo.ProcedureType.ConnectAuthenticate, typeof(TextBubble))]
+    public class WackyMessenger : Service
+    {
+        public override bool Initialize(DisaSettings settings)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool InitializeDefault()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool Authenticate(WakeLock wakeLock)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Deauthenticate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Connect(WakeLock wakeLock)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Disconnect()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetIcon(bool large)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IEnumerable&lt;Bubble&gt; ProcessBubbles()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void SendBubble(Bubble b)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool BubbleGroupComparer(string first, string second)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupLegibleId(BubbleGroup group, Action&lt;string&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupName(BubbleGroup group, Action&lt;string&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupPhoto(BubbleGroup group, Action&lt;DisaThumbnail&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupPartyParticipants(BubbleGroup group, Action&lt;DisaParticipant[]&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupUnknownPartyParticipant(BubbleGroup group, string unknownPartyParticipant, Action&lt;DisaParticipant&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupPartyParticipantPhoto(DisaParticipant participant, Action&lt;DisaThumbnail&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupLastOnline(BubbleGroup group, Action&lt;long&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class WackyMessengerSettings : DisaSettings
+    {
+        // store settings in here:
+        // e.g: public string Username { get; set; }
+    }
+}
+</code></pre><p>At the very top of the Service class, we specify its information (i.e: how the framework must manage it).</p>
+<pre><code>[ServiceInfo(&quot;WackyMessenger&quot;, true, false, false, false, false, typeof(WackyMessengerSettings), ServiceInfo.ProcedureType.ConnectAuthenticate, typeof(TextBubble))]
+</code></pre><p>We will be using event driven bubbles. What does this mean? Some services require a dedicated thread to be infinitely polling against a keep-alive connection. By setting event driven bubbles to false, the ProcessBubbles iterator block is called in an infinite threaded loop while the service is running. Thus, the Framework completely manages this aspect of keeping the poller constantly alive. By setting event driven bubbles to true, you are effectively telling the Framework: &quot;I want to manage all the polling myself, and invoke off the EventBubble method whenever I a new bubble comes in.&quot;</p>
+<p>We will not be using media progress. We don&#39;t support anything but text bubbles. If your service can support giving feedback back to the client on the upload process of media bubbles (images, videos, etc), you&#39;ll set this flag to true and then use the Transfer.Progress callback in the associated media bubble you&#39;re uploading.</p>
+<p>This service does not use internet. If it we set this to true, then the Framework will ensure that the service is stopped if there is no internet connection.</p>
+<p>This service does not support battery savings mode.</p>
+<p>This service does not use delayed notifications. Delayed notifications will delay notification dispatches by 1 (one) second. Setting this to true and using NotificationManager.Remove allows you to have multiple clients working together without notifications going off while chatting on another client.</p>
+<p>The Framework manages a settings store of your service. You can use this to store any information. WackyMessenger doesn&#39;t need to store anything, so we don&#39;t need it. Additionally, you can use MutableSettings and MutableSettingsManager to save information you find yourself frequently saving (such as a timestamp you need to keep updated everytime the service is started).</p>
+<p>The procedure type is set to ConnectAuthenticate. This means that the service scheduler will call Connect before calling Authenticate. The other option is AuthenticateConnect - which called Authenticate before Connect. Once again, the option is given here because some services require Authenticating before connecting, and vice-versa.</p>
+<p>Finally, the last argument is a params[] of all the supported bubble types. Since WackyMessenger only supports Text bubbles, that&#39;s the only bubble we list there.</p>
+<p>It also should be mentioned that if you use files, audio, or video bubbles in your plugin, you need to add the associated attribute. These can be found in ServiceInfo.cs.</p>
+<p>Great! Now let&#39;s talk a bit about the starting of your newly implemented service.</p>
+<h2 id="service-start-process">Service Start Process</h2>
+<p>The first thing that happens is that InitializeDefault() is called. It attempts to try and start the service without any settings. If this method returns true, it is assumed your service doesn&#39;t need any settings. Authenticate and Connect is then directly called afterwards (the order of which one is first depends on your set procedure type, as mentioned above). If this method returns false, then InitializeDefault(DisaSettings) is called - the framework provided you with your stored settings. Whenever you want to save your settings, you can call SettingsManager.Save.</p>
+<p>So, for WackyMessenger, all we need to do is initialize the default - we are not using Settings.</p>
+<pre><code>public override bool InitializeDefault()
+{
+     return true;
+}
+</code></pre><p>For connect, WackyMessenger doesn&#39;t really connect to anything. So, we can just leave it blank:</p>
+<pre><code>public override void Connect(WakeLock wakeLock)
+{
+   // do nothing
+}
+</code></pre><p>As with Authenticate:</p>
+<pre><code>public override bool Authenticate(WakeLock wakeLock)
+{
+   return true;
+}
+</code></pre><p>What exactly is that WakeLock? Whenever Disa executes one of these methods, it holds a wake lock on the method&#39;s duration so the phone doesn&#39;t fall asleep and stop your service&#39;s starting process. However, wake locks are expensive to battery life. If you know that you can temporarily free the wakelock (such as when you&#39;re awaiting for a response from a server), you can use WakeLock.TemporaryFree disposable (wrap it in a using statement) to do so.</p>
+<p>Aside: Whenever you are awaiting data from a socket connection (including HTTP connections) in Android, you can allow the device to fall asleep. When there&#39;s a response from the socket, your device will be woken back up, allowing the newly presented data to be processed. This is the motivation behind the temporary free optimization.
+In the event that Authenticate or Connect doesn&#39;t succeed, and can just pass up the exception to the Framework. It will deal with a connection failure or authentication failure accordingly. However, there are some exceptions to let the Framework know that there is something particularly wrong. For example, passing a ServiceExpiredException in one of these methods will let the Framework know that the service has expired (subscription needs to be repaid for example). For more exceptions, take a look at all the defined *Exceptions in the framework, and their mappings into the service scheduler.</p>
+<h2 id="service-stop-process">Service Stop Process</h2>
+<p>When a service is stopped, two methods are called: Deauthenticate and Disconnect. The order once again depends on the procedure type. Use these methods to teardown your service.</p>
+<p>In WackyMessenger, we can simply ignore them, as there&#39;s nothing to teardown:</p>
+<pre><code>public override void Deauthenticate()
+{
+    // do nothing
+}
+
+public override void Disconnect()
+{
+    // do nothing
+}
+</code></pre><h2 id="interim-summary">Interim Summary</h2>
+<p>Your code should now look like this:</p>
+<pre><code>.
+.
+.
+public override bool InitializeDefault()
+{
+    return true;
+}
+
+public override bool Authenticate(WakeLock wakeLock)
+{
+    return true;
+}
+
+public override void Deauthenticate()
+{
+    // do nothing
+}
+
+public override void Connect(WakeLock wakeLock)
+{
+    // do nothing
+}
+
+public override void Disconnect()
+{
+    // do nothing
+}
+.
+.
+.
+</code></pre><h2 id="implementing-bubble-sending">Implementing bubble sending</h2>
+<p>Great. So now, the service will both start and stop. Its pretty damn useless though. Lets add some sending:</p>
+<pre><code>public override void SendBubble(Bubble b)
+{
+    var textBubble = b as TextBubble;
+    if (textBubble != null) 
+    {
+     Utils.Delay(2000).Wait();
+     Platform.ScheduleAction(1, new WakeLockBalancer.ActionObject(() = &gt; 
+        {
+            EventBubble(new TextBubble(Time.GetNowUnixTimestamp(), Bubble.BubbleDirection.Incoming,
+        textBubble.Address, null, false, this, Reverse(textBubble.Message)));
+        }, WakeLockBalancer.ActionObject.ExecuteType.TaskWithWakeLock));
+    }
+}
+
+private static string Reverse(string s)
+{
+    char[] charArray = s.ToCharArray();
+    Array.Reverse(charArray);
+    return new string(charArray);
+}
+</code></pre><p>Alright. So what&#39;s happening here? We wait 2 seconds (a poor simulation of how long it takes to send a message to a server), and then we schedule a wake-locked action to occur in 1 second. That action is an incoming message of the message we sent, reversed - exactly as we set out to do. The latter is accomplished by the <code>EventBubble</code> method call to which we got access to via the aforementioned <code>eventDrivenBubbles</code> flag.</p>
+<p>After that, the <code>SendBubble</code> method ends - no exception has been encountered. That means that the Framework will mark the message successfully as sent. Fantastic! If any any exception is thrown up the stack in <code>SendBubble</code> (that is, to the Framework) then the Framework will mark the bubble as failed and alert the user via a notification if necessary. Moreover, if you catch that exception in the <code>SendBubble</code> method, and consequently throw a <code>ServiceQueuedBubbleException</code> back up the stack to the Framework, then you&#39;ll ask the Framework to resend to bubble. The Framework will then deal with sending the bubble a later time.</p>
+<p>In addition to scheduling a once-off action, we can ask the Framework to schedule a reoccurring action (perfect for keep-alive heartbeats).</p>
+<h2 id="processbubbles">ProcessBubbles</h2>
+<p>Even though WackyMessenger does not use the <code>ProcessBubbles</code> method, its important to explain a bit about it. Firstly, it&#39;s an iterator block. In a trivial messenger setup, you&#39;ll call upon your <code>Socket.Receive</code> blocking method in <code>ProcessBubbles</code>. When data comes in, it&#39;ll be processed by your serializer (XML, JSON, custom, etc.), and then objectified into a Disa Framework bubble. A mere <code>yield return bubble</code> will then catapult the bubble back to the Framework, in the exact same way that EventBubble behaves.</p>
+<h2 id="interim-summary-2">Interim Summary 2</h2>
+<p>Alright, now you&#39;ll be left with something like this:</p>
+<pre><code>.
+.
+.
+private static string Reverse( string s )
+{
+    char[] charArray = s.ToCharArray();
+    Array.Reverse( charArray );
+    return new string( charArray );
+}
+
+public override void SendBubble(Bubble b)
+{
+    var textBubble = b as TextBubble;
+    if (textBubble != null)
+    {
+        Utils.Delay(2000).Wait();
+        Platform.ScheduleAction(1, new WakeLockBalancer.ActionObject(() =&gt;
+        {
+            EventBubble(new TextBubble(Time.GetNowUnixTimestamp(), Bubble.BubbleDirection.Incoming,
+                textBubble.Address, null, false, this, Reverse(textBubble.Message)));
+        }, WakeLockBalancer.ActionObject.ExecuteType.TaskWithWakeLock));
+    }
+}
+.
+.
+.
+</code></pre><h2 id="the-final-tid-bits">The Final Tid-bits</h2>
+<p>We&#39;ll need to implement the <code>BubbleGroupComparer</code> method. This method is basically how Disa deals with grouping Bubbles into <code>BubbleGroups</code>. A BubbleGroup is synonymous with a thread or conversation.</p>
+<p>In most cases, you&#39;ll just do an ordinal string comparison (the &#39;==&#39; in C#). However, in some cases you may need to use an algorithm - such as a <code>PhoneNumberComparer</code> that will yield equality to the number tuple +1 604 393 2838 and 604-393-2838. You can find this comparer in PhoneBook.cs.</p>
+<p>In WackyMessenger&#39;s case, ordinal string comparison will suffice:</p>
+<pre><code>public override bool BubbleGroupComparer(string first, string second)
+{
+    return first == second;
+}
+</code></pre><p>Next off, <code>GetBubbleGroupLegibleId</code>. Some conversations need an additional mark on them in the conversation list (in a SMS/MMS plugin, we need to label the conversation in the conversation list with a Mobile, Work, Home, tag).</p>
+<p>In WackyMessenger, we don&#39;t need such a thing! Leave this method be - we don&#39;t need to touch it.</p>
+<p>Next up, GetBubbleGroupName. This should be pretty self explanatory. How do I relate the address &quot;604 232 9830&quot; to &quot;Meghan&quot;? This is that method.</p>
+<p>In WackyMessenger&#39;s case, its so simple, that we don&#39;t really have any way to relate an address back to who it is. After all, it is just repeating what we say. Therefore, the name of the BubbleGroup will be the address of it. Simple, right?</p>
+<pre><code>public override Task GetBubbleGroupName(BubbleGroup group, Action&lt;string&gt; result)
+{
+    return Task.Factory.StartNew(() =&gt;
+    {
+        result(group.Address);
+    });
+}
+</code></pre><p>It should be noted that this is a common pattern that you&#39;ll be seeing in a lot of Disa&#39;s interface code. We try to enforce the plugin developer to use the Task Programming Library as tasks are cheap, and the Framework is incredibly asynchronous. When the result is found, you call the provided callback, result, with the, well, result.</p>
+<p>Next, <code>GetBubbleGroupPhoto</code>. This gets the photo of the conversation. Once again, WackyMessenger is simple and dumb. Lets just tell the framework to generate the default thumbnail.</p>
+<pre><code>public override Task GetBubbleGroupPhoto(BubbleGroup group, Action&lt;DisaThumbnail&gt; result)
+{
+    return Task.Factory.StartNew(() =&gt;
+    {
+        result(null);
+    });
+}
+</code></pre><p>The next three methods, <code>GetBubbleGroupPartyParticipants</code>, <code>GetBubbleGroupUnknownPartyParticipant</code>, <code>GetBubbleGroupPartyParticipantPhoto</code> are all Party orientated. WackyMessenger doesn&#39;t support parties yet. We&#39;ll ignore these for now - we&#39;ll come back to it in the later tutorials when we actually give WackyMessenger Party support.</p>
+<p>And finally, <code>GetBubbleGroupLastOnline</code>, fetches the last seen time of the specified conversation. The BubbleGroup passed into here will always be a solo (i.e: not a Party/GroupChat). WackyMessenger doesn&#39;t support last seen times. Therefore, we just ignore it.</p>
+<h2 id="interim-summary-3">Interim Summary 3</h2>
+<p>At this point, you should have the following code:</p>
+<pre><code>using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Disa.Framework.Bubbles;
+
+namespace Disa.Framework.WackyMessenger
+{
+    [ServiceInfo(&quot;WackyMessenger&quot;, true, false, false, false, false, typeof(WackyMessengerSettings), 
+        ServiceInfo.ProcedureType.ConnectAuthenticate, typeof(TextBubble))]
+    public class WackyMessenger : Service
+    {
+        public override bool Initialize(DisaSettings settings)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool InitializeDefault()
+        {
+            return true;
+        }
+
+        public override bool Authenticate(WakeLock wakeLock)
+        {
+            return true;
+        }
+
+        public override void Deauthenticate()
+        {
+            // do nothing
+        }
+
+        public override void Connect(WakeLock wakeLock)
+        {
+            // do nothing
+        }
+
+        public override void Disconnect()
+        {
+            // do nothing
+        }
+
+        public override string GetIcon(bool large)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IEnumerable&lt;Bubble&gt; ProcessBubbles()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static string Reverse( string s )
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse( charArray );
+            return new string( charArray );
+        }
+
+        public override void SendBubble(Bubble b)
+        {
+            var textBubble = b as TextBubble;
+            if (textBubble != null)
+            {
+                Utils.Delay(2000).Wait();
+                Platform.ScheduleAction(1, new WakeLockBalancer.ActionObject(() =&gt;
+                {
+                    EventBubble(new TextBubble(Time.GetNowUnixTimestamp(), Bubble.BubbleDirection.Incoming,
+                        textBubble.Address, null, false, this, Reverse(textBubble.Message)));
+                }, WakeLockBalancer.ActionObject.ExecuteType.TaskWithWakeLock));
+            }
+        }
+
+        public override bool BubbleGroupComparer(string first, string second)
+        {
+            return first == second;
+        }
+
+        public override Task GetBubbleGroupLegibleId(BubbleGroup group, Action&lt;string&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupName(BubbleGroup group, Action&lt;string&gt; result)
+        {
+            return Task.Factory.StartNew(() =&gt;
+            {
+                result(group.Address);
+            });
+        }
+
+        public override Task GetBubbleGroupPhoto(BubbleGroup group, Action&lt;DisaThumbnail&gt; result)
+        {
+            return Task.Factory.StartNew(() =&gt;
+            {
+                result(null);
+            });
+        }
+
+        public override Task GetBubbleGroupPartyParticipants(BubbleGroup group, Action&lt;DisaParticipant[]&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupUnknownPartyParticipant(BubbleGroup group, string unknownPartyParticipant, Action&lt;DisaParticipant&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupPartyParticipantPhoto(DisaParticipant participant, Action&lt;DisaThumbnail&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task GetBubbleGroupLastOnline(BubbleGroup group, Action&lt;long&gt; result)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class WackyMessengerSettings : DisaSettings
+    {
+        // store settings in here:
+        // e.g: public string Username { get; set; }
+    }
+}
+</code></pre><p>Wonderful! We actually now have enough code to run out first plugin! ^^ exciting ^^</p>
+<p>Let&#39;s Run It!</p>
+<p>Add Disa.Framework.WackyMessenger as a reference in Disa.Terminal.</p>
+<p>Go into Program.cs in Disa.Terminal, and change:</p>
+<pre><code>Initialize(new Service[] { });
+</code></pre><p>into</p>
+<pre><code>Initialize(new [] { new WackyMessenger() });
+</code></pre><p>Note: you may have to add a using statement to the top of Program.cs here.</p>
+<pre><code>using Disa.Framework.WackyMessenger;
+</code></pre><p>Now, launch Disa.Terminal.</p>
+<p>You have to register a service before you can use it. So, Type:</p>
+<pre><code>register WackyMessenger
+</code></pre><p>You&#39;ll only have to do this once. Disa has now saved this setting onto your disk. Then type,</p>
+<pre><code>startall
+</code></pre><p>All the services will now start. We can now test our plugin:</p>
+<pre><code>send WackyMessenger Meghan &quot;Hello there&quot;
+</code></pre><p>Now, wait a bit.. and then you should get a response!</p>
+<p><img src="../../images/FirstPlugin/DisaTerminal.png" alt="setting up your ide"></p>
+<p>Wahoo, we did it!</p>
+<h2 id="a-big-problem--duplicate-bubbles">A Big Problem | Duplicate Bubbles</h2>
+<p>It&#39;s possible that Disa may send a bubbles twice (e.g: lost acknowledgment but server actually received the message which results in Disa resending the bubble again) - which is quite common when you have flaky internet connections. This isn&#39;t a flaw accustomed to just Disa - many other clients have the exact same issue.</p>
+<p>To address this issue, bubbles typically get unique IDs associated with them. The bubble is then sent to the server along with an ID. If the server gets a duplicate ID, then it merely discards of it.</p>
+<p>To implement this in Disa, implement the <code>IVisualBubbleServiceId</code> interface:</p>
+<pre><code>public void AddVisualBubbleIdServices(VisualBubble bubble)
+{
+    throw new NotImplementedException();
+}
+
+public bool DisctinctIncomingVisualBubbleIdServices()
+{
+    throw new NotImplementedException();
+}
+</code></pre><p>You are free to set the <code>VisualBubble.IdService</code> and <code>VisualBubble.IdService2</code> properties in <code>AddVisualBubbleIdServices</code>. <code>AddVisualBubbleIdServices</code> is called just before the bubble reached SendBubble in your service code.</p>
+<p><code>DisctinctIncomingVisualBubbleIdServices</code> asks if you want to filter any duplicate incoming bubbles. There&#39;s also the possibility that the server may send you multiple messages of the same ID. If this method returns true, it will filter those. If it returns false, it will not filter them.</p>
+<p>In WackyMessenger&#39;s case, it&#39;s not necessary to include this. But for the sake of an example, here&#39;s the full-code with it implemented:</p>
+<pre><code>using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Disa.Framework.Bubbles;
+
+namespace Disa.Framework.WackyMessenger
+{
+    [ServiceInfo(&quot;WackyMessenger&quot;, true, false, false, false, false, typeof(WackyMessengerSettings), 
+        ServiceInfo.ProcedureType.ConnectAuthenticate, typeof(TextBubble))]
+    public class WackyMessenger : Service, IVisualBubbleServiceId
+    {
+        private string _deviceId;
+        private int _bubbleSendCount;
+        .
+        .
+        .
+        public void AddVisualBubbleIdServices(VisualBubble bubble)
+        {
+            bubble.IdService = _deviceId + ++_bubbleSendCount;
+        }
+
+        public bool DisctinctIncomingVisualBubbleIdServices()
+        {
+            return true;
+        }
+        .
+        .
+        .
+</code></pre><p>Notice that we get the Unix timestamp here, and then append a message counter to it. This ensures that Message Ids are always unique.</p>
+<h2 id="in-summary">In Summary</h2>
+<p>In summary you have learned how to make your first plugin, and also quite a bit about the Disa Framework.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Docs/articles/FirstPlugin/BasicPlugin.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

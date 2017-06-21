@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Disa Service Manager | Disa Framework </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Disa Service Manager | Disa Framework ">
+    <meta name="generator" content="docfx 2.18.4.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+	    <div class="disa-topnav">
+	      <img src="/images/disa-logo-nav.png" alt="Disa">
+	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
+	      <a href="http://disa.im/download.html">Download</a>
+	      <a href="http://disa.im/faq.html">FAQ</a>
+	      <a href="http://disa.im/news.html">News</a>
+	    </div>
+	    <div class="disa-frameworknav">
+	      <p>Disa Framework</p>
+	      <a href="/index.html">Documentation</a>
+	      <a href="/articles/intro.html">Blog</a>
+	    </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="disa-service-manager">Disa Service Manager</h1>
+
+<p><code>Disa.Framework.ServiceManager</code> controls the registration and lifecycle of your Plugin.</p>
+<h2 id="supporting-classes">Supporting Classes</h2>
+<p><code>ServiceManager</code> depends on several supporting classes that you&#39;ll want to have a good understanding of before we dig deeper into the core of <code>ServiceManager</code>.</p>
+<p><strong>ServiceBinding</strong></p>
+<p><code>ServiceManager</code> maintains a static <code>List</code> of <code>ServiceBinding</code> instances. This allows ServiceManager to track lifecycle state for a particular <code>Service</code>.</p>
+<pre><code>{
+    public Service Service { get; private set; }
+    public ServiceFlags Flags { get; private set; }
+
+    public ServiceBinding(Service service, ServiceFlags flags)
+    {
+        Service = service;
+        Flags = flags;
+    }
+}
+</code></pre><p><strong>ServiceFlags</strong></p>
+<p>The lifecycle state of a particular <code>Service</code> is represented by an instance of <code>ServiceFlags</code>. </p>
+<pre><code>private class ServiceFlags
+{
+    public bool Running { get; set; }
+    public bool Starting { get; set; }
+    public bool ManualSettingsNeeded { get; set; }
+    public bool ConnectionFailed { get; set; }
+    public bool AuthenticationFailed { get; set; }
+    public bool DisconnectionFailed { get; set; }
+    public bool DeauthenticationFailed { get; set; }
+    public bool Aborted { get; set; }
+    public bool AbortedSpecial { get; set; }
+    public bool Expired { get; set; }
+}
+</code></pre><p>This allows <code>ServiceManager</code> to expose methods for querying the state of a particular <code>Service</code> such as:</p>
+<pre><code>private static IEnumerable&lt;Service&gt; BindingQuery(Func&lt;ServiceBinding, bool&gt; predicate)
+{
+    return from serviceBinding in ServicesBindings
+            where predicate(serviceBinding)
+            select serviceBinding.Service;
+}
+
+public static IEnumerable&lt;Service&gt; Running
+{
+    get { return BindingQuery(binding =&gt; binding.Flags.Running); }
+}
+
+public static bool IsRunning(Service service)
+{
+    return Running.FirstOrDefault(s =&gt; s == service) != null;
+}
+</code></pre><h2 id="querying-for-services">Querying for Services</h2>
+<p>Here is a summary of the <code>ServiceManager</code> APIs you can use to query the services based on their lifecycle state. </p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registered</td>
+<td></td>
+</tr>
+<tr>
+<td>RegisteredNoUnified</td>
+<td></td>
+</tr>
+<tr>
+<td>Starting</td>
+<td></td>
+</tr>
+<tr>
+<td>Running</td>
+<td></td>
+</tr>
+<tr>
+<td>RunningNoUnified</td>
+<td></td>
+</tr>
+<tr>
+<td>ManualSettingsNeeded</td>
+<td></td>
+</tr>
+<tr>
+<td>ConnectionFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>AuthenticationFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>DisconnectionFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>DeauthenticationFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>Expired</td>
+<td></td>
+</tr>
+<tr>
+<td>Aborted</td>
+<td></td>
+</tr>
+<tr>
+<td>AbortedSpecial</td>
+<td></td>
+</tr>
+<tr>
+<td>GetNonRegistered</td>
+<td></td>
+</tr>
+<tr>
+<td>GetRegistered</td>
+<td></td>
+</tr>
+<tr>
+<td>IsRegistered</td>
+<td></td>
+</tr>
+<tr>
+<td>IsStarting</td>
+<td></td>
+</tr>
+<tr>
+<td>IsRunning</td>
+<td></td>
+</tr>
+<tr>
+<td>IsExpired</td>
+<td></td>
+</tr>
+<tr>
+<td>IsAborted</td>
+<td></td>
+</tr>
+<tr>
+<td>IsAbortedSpecial</td>
+<td></td>
+</tr>
+<tr>
+<td>IsManualSettingsNeeded</td>
+<td></td>
+</tr>
+<tr>
+<td>IsConnectionFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>IsAuthenticationFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>IsDisconnectionFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>IsDeauthenticationFailed</td>
+<td></td>
+</tr>
+<tr>
+<td>GetFlags</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>And here are some additional <code>ServiceManager</code> APIs for querying for <code>Service</code>s and <code>Service</code> state.</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Get(BubbleGroup group)</td>
+<td></td>
+</tr>
+<tr>
+<td>Has(BubbleGroup group, Service service)</td>
+<td></td>
+</tr>
+<tr>
+<td>Get<t>(string guid)</t></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="registering-and-unregistering-services">Registering and Unregistering Services</h2>
+<p>Now we can return to <code>PlatformManager.InitializeMain</code> and the call to:</p>
+<pre><code>ServiceManager.Initialize(allServices.ToList());
+</code></pre><p>Recall that the collection of <code>Service</code> instance we have here was passed in to <code>InitializeMain</code>.  Typically, this will be called by the Disa front-end. We will see how this list of <code>Service</code> instances is created in the section on Deploying. For now, let&#39;s pickup in <code>ServiceManager.Initialize</code> where see that we assign the passed in <code>Service</code> instances to the collection <code>AllInternal</code>.</p>
+<pre><code>AllInternal = allServices;
+</code></pre><p>While <code>AllInternal</code> is private, it is exposed via the following APIs:</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All</td>
+<td></td>
+</tr>
+<tr>
+<td>AllNoUnified</td>
+<td></td>
+</tr>
+<tr>
+<td>Get(Type serviceType)</td>
+<td></td>
+</tr>
+<tr>
+<td>GetByName(string serviceName)</td>
+<td></td>
+</tr>
+<tr>
+<td>GetUnified()</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>We then get our first exposure to <code>ServiceManager.RegisteredServicesDatabase</code> via this call:</p>
+<pre><code>RegisteredServicesDatabase.RegisterAllRegistered();
+</code></pre><p><strong>ServiceManager.RegisteredServicesDatabase</strong></p>
+<p><code>RegisteredServicesDatabase</code> maintains an XML listing of all registered services. The XML backing file is named <code>RegisteredServicesList.xml</code> and will be located at the location pointed to by <code>Platform.GetSettingsPath()</code>. Besides  <code>RegisterAllRegistered</code>, which we will explore in a sec, `RegisteredServicesDatabase also exposes:</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SaveAllRegistered</td>
+<td>Saves the name of each <code>Service</code> in <code>RegisterNoUnified</code> into <code>RegisteredServicesList.xml</code></td>
+</tr>
+<tr>
+<td>FetchAllRegistered(string settingsPath)</td>
+<td>Given a settings path, will return a <code>List&lt;string&gt;</code> of all registered service names.</td>
+</tr>
+<tr>
+<td>AddToRegisteredAndSaveAllForImminentRestart(string settingsPath, string additionalService)</td>
+<td>Given a settings path and the name of a new <code>Service</code>, will write out a new <code>RegisteredServicesList.xml</code> with new <code>Service</code> name included.</td>
+</tr>
+</tbody>
+</table>
+<p>OK, let&#39;s get back to our <code>RegisteredServicesDatabase.RegisterAllRegistered</code> call. In this method, we read in all the <code>Service</code> names in <code>RegisteredServicesList.xml</code>. We then loop over all the names and verify that it is contained in <code>AllInternal</code>. With this check in place we proceed to call:</p>
+<pre><code>Register(service);
+</code></pre><p>Following into this function, we see that a <code>Service</code> is considered registered once a <code>ServiceBinding</code> instance has been added into the <code>ServiceManager.ServiceBinding</code> collection for it. Also, the <code>ServiceBinding</code> will have freshly initialized <code>ServiceFlags</code> instance at this point in time.</p>
+<pre><code>lock (ServicesBindings) ServicesBindings.Add(
+    new ServiceBinding(service, new ServiceFlags()));
+</code></pre><p><strong>Unregistering</strong></p>
+<p>A <code>Service</code> can be unregistered by calling <code>Unregister</code>. This will have the effect of removing the <code>ServiceBinding</code> instance for the <code>Service</code>. This will also cause an event to be raised that you can listen for:</p>
+<pre><code>ServiceEvents.RaiseServiceUnRegistered(service);
+</code></pre><p><strong>TODO</strong>
+    SettingsChangedManager.SetNeedsContactSync(service, true);</p>
+<h2 id="managing-service-lifecycle">Managing Service Lifecycle</h2>
+<p><strong>Starting</strong></p>
+<p><code>ServiceManager.Start</code> is used to start a <code>Service</code>. We start by wrapping the entire start of the <code>Service</code> in a background thread:</p>
+<pre><code>return Task.Factory.StartNew(() =&gt;
+{
+</code></pre><p>We then further wrap the entire start of the <code>Service</code> in the DisaStart <code>WakeLock</code>.</p>
+<pre><code>using (var wakeLock = Platform.AquireWakeLock(&quot;DisaStart&quot;))
+{
+</code></pre><p>Simplistic checks are then performed to make sure the <code>Service</code> is not already running or starting. We simply return if so. We then add one more additional wrapping of the start of the <code>Service</code> by locking on the service instance passed in:</p>
+<pre><code>lock (service)
+{
+</code></pre><p>With this setup in place, we now set our current state for this <code>Service</code>:</p>
+<pre><code>GetFlags(service).Aborted = false;
+GetFlags(service).AbortedSpecial = false;
+GetFlags(service).Starting = true;
+GetFlags(service).ManualSettingsNeeded = false;
+</code></pre><p>We then attempt to load our <code>DisaSettings</code> derived settings class for this <code>Service</code>.</p>
+<pre><code>var settings = SettingsManager.Load(service);
+</code></pre><p>If this returns null, it means we have not specified a <code>DisaSettings</code> derived class for this <code>Service</code> - see the section on Disa Settings in this Guide for further details on why this could occur. If the settings are null, then we call our <code>Service</code> lifecycle method <code>InitializeDefault</code>.</p>
+<pre><code>if (!service.InitializeDefault())
+{
+    GetFlags(service).ManualSettingsNeeded = true;
+    ServiceEvents.RaiseServiceManualSettingsNeeded(service);
+}
+else
+{
+    Utils.DebugPrint(&quot;Service initialized under no settings.&quot;);
+}
+</code></pre><p>Note here how if our implementation for <code>Service.InitializeDefault</code> returns false, then we set our <code>ManaulSettingsNeeded</code> flag and raise the event <code>ManualSettingsNeeded</code>.</p>
+<p>Now let&#39;s take the opposite path where are our call to SettingsManager.Load returns our DisaSettings derived settings class instance. In this case, we call the <code>Service</code> lifecycle method <code>Initialize</code> passing in our settings instance.</p>
+<pre><code>if (service.Initialize(settings))
+{
+    Utils.DebugPrint(&quot;Successfully initialized service!&quot;);
+}
+else
+{
+    GetFlags(service).ManualSettingsNeeded = true;
+    ServiceEvents.RaiseServiceManualSettingsNeeded(service);
+}
+</code></pre><p>Similar to our implementation for <code>InitializeDefault</code>, if our implementation for <code>Initialize</code> returns false, then we set our <code>ManaulSettingsNeeded</code> flag and raise the event <code>ManualSettingsNeeded</code>.</p>
+<p>Next, if our <code>Service</code> has specified that it <code>UsesInternet</code> we perform our platform specific checks to see if we have an Internet connection and if we should attempt an Internet connection. The <code>ServiceInfo</code> attribute on your Plugin&#39;s <code>Service</code> derived class will be where you specify your <code>Service</code> uses Internet.</p>
+<p>With these initial checks and initialization lifecycle calls out of the way we now call <code>StartInternal</code> which will handle our connect and authenticate lifecycle method calls.</p>
+<pre><code>StartInternal(service, wakeLock);
+</code></pre><p>Picking up in <code>StartInternal</code>, we make our checks to see if manual settings are needed, the service is registered and the service is not already running. An appropriate <code>ServiceSchedulerException</code> is thrown if necessary. We then update our state for the <code>Service</code> with a call to <code>ClearFailures</code> which will update the state as follows:</p>
+<pre><code>flags.ConnectionFailed = false;
+flags.AuthenticationFailed = false;
+flags.DeauthenticationFailed = false;
+flags.DisconnectionFailed = false;
+</code></pre><p>Following this, we raise the <code>SettingsLoaded</code> event for any interested listeners.</p>
+<p>With all of this behind us, we are now ready to call our lifecycle methods for connect and authenticate. A <code>Service</code> can specify via the <code>ServiceInfo</code> attribute the order in which these lifecycle methods are called as we can see here:</p>
+<pre><code>if (registeredService.Information.Procedure 
+    == ServiceInfo.ProcedureType.AuthenticateConnect)
+{
+    authenticate();
+    connect();
+}
+else if (registeredService.Information.Procedure 
+            == ServiceInfo.ProcedureType.ConnectAuthenticate)
+{
+    connect();
+    authenticate();
+}
+</code></pre><p>Note that the <code>connect</code> and <code>authenticate</code> calls here are actually <code>Action</code> delegates defined above this code snippet. The delegates handle catching and rethrowing exceptions as appropriate. Also, the delegates will handle setting the <code>ConnectionFailed</code> and <code>AuthenticationFailed</code> states for the <code>Service</code> if necessary.</p>
+<p>If the calls to <code>connect</code> and <code>authenticate</code> succeed, then we set the state of the <code>Service</code> to <code>Running</code> and raise the <code>Started</code> event.</p>
+<p>OK, back in our <code>ServiceManager.Start</code> method, we pickup by handling any exceptions coming out of our most recent steps. Exception handlers here will set the <code>Starting</code> state of the <code>Service</code> to false. In addition the <code>ServiceSpecialRestartException</code> handler will attempt another start of the <code>Service</code> with an appropriate delay:</p>
+<pre><code>catch (ServiceSpecialRestartException ex)
+{
+    Utils.DebugPrint(&quot;Service &quot; + service.Information.ServiceName +
+                        &quot; is asking to be restarted on connect/authenticate. This should be called sparingly, Disa can easily &quot; +
+        &quot;break under these circumstances. Reason: &quot; + ex + &quot;. Restarting...&quot;);
+    StopInternal(service);
+    epilogue();
+    Start(service, smartStart, smartStartSeconds);
+    return;
+}
+</code></pre><p>Also, the <code>ServiceExpiredException</code> handler will set the <code>Aborted</code> and <code>Expired</code> state for the <code>Service</code> as well as raise the <code>ServiceExpired</code> event.</p>
+<pre><code>catch (ServiceExpiredException ex)
+{
+    Utils.DebugPrint(&quot;The service &quot; + service.Information.ServiceName +
+                        &quot; has expired: &quot; + ex);
+    GetFlags(service).Aborted = true;
+    GetFlags(service).Expired = true;
+    ServiceEvents.RaiseServiceExpired(service);
+    StopInternal(service);
+    epilogue();
+    return;
+}
+</code></pre><p>A this point we hook into the <code>BubbleManager</code> and start our Bubble receiving thread.</p>
+<pre><code>BubbleManager.SendSubscribe(service, true);
+BubbleManager.SendLastPresence(service);
+
+service.ReceivingBubblesThread = new Thread(() =&gt;
+{
+    StartReceiveBubbles(service);
+});
+service.ReceivingBubblesThread.Start();
+</code></pre><p>We&#39;ll hold off on describing these for the section on the Bubble Manager and Bubbles later in this Guide.</p>
+<p>Finally, we set the <code>Starting</code> state for our <code>Service</code> to false.</p>
+<pre><code>GetFlags(service).Starting = false;
+</code></pre><p><strong>TODO</strong></p>
+<pre><code>BubbleQueueManager.SetNotQueuedToFailures(service);
+
+Utils.Delay(1000).ContinueWith(x =&gt;
+{
+    BubbleGroupSync.ResetSyncsIfHasAgent(service);
+    BubbleGroupUpdater.Update(service);
+    BubbleQueueManager.Send(new[] {service.Information.ServiceName});
+    BubbleGroupManager.ProcessUpdateLastOnlineQueue(service);
+    SettingsChangedManager.SyncContactsIfNeeded(service);
+});
+</code></pre><p><strong>Stopping</strong></p>
+<p><strong>Restarting</strong></p>
+<p><strong>Aborting</strong></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Disa-im/DisaOpenSource/blob/alpha/Docs/articles/DisaFramework/DisaServiceManager.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright Disa Technologies
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
