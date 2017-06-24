@@ -23,19 +23,32 @@
     <div id="wrapper">
       <header>
 	    <div class="disa-topnav">
-	      <img src="images/disa-logo-nav.png" alt="Disa">
+	      <a href="http://disa.im" target="_blank" style="padding:0;">
+	        <img src="images/disa-logo-nav.png" alt="Disa">
+	      </a>
 	      <a href="https://plus.google.com/communities/114009566886187417546">Community</a>
 	      <a href="http://disa.im/download.html">Download</a>
 	      <a href="http://disa.im/faq.html">FAQ</a>
 	      <a href="http://disa.im/news.html">News</a>
 	    </div>
 	    <div class="disa-frameworknav">
-	      <p>Disa Framework</p>
+	      <p>Disa Framework <sup>beta</sup></p>
 	      <a href="index.html">Documentation</a>
 	      <a href="articles/intro.html">Blog</a>
 	      <a href="Disa%20Framework%20Developer%20Guide.pdf" target="_blank">Download PDF</a>
 	    </div>
-        
+		<!-- The Modal -->
+		<div id="disa-myModal" class="disa-modal">
+		
+		  <!-- The Close Button -->
+		  <span class="disa-close" onclick="document.getElementById('disa-myModal').style.display='none'">&times;</span>
+		
+		  <!-- Modal Content (The Image) -->
+		  <img class="disa-modal-content" id="disa-img01">
+		
+		    <!-- Modal Caption (Image Text) -->
+		    <div id="disa-caption"></div>
+		</div>        
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -86,7 +99,7 @@
           <ul class="nav level1">
             <li>
               <span class="expand-stub"></span>
-              <a>Articles</a>
+              <a>Disa Framework Developer Guide</a>
                 
                 <ul class="nav level2">
                   <li>
